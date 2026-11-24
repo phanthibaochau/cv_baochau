@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CV – Sinh viên Kế toán · Logistics</title>
+<link rel="icon" type="image/png" href="images/avatar2.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap">
+<style>
+:root{
+  --teal:#14213d; --teal2:#2a4573; --rose:#b8925a; --blush:#d9a441; --gold:#d9a441;
+  --bg:#f7f8fb; --card:#ffffff; --text:#1f2937; --muted:#64707f; --line:#e3e7ee; --h:#14213d;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#0e1626; --card:#16223a; --text:#eef1f6; --muted:#9aa7ba; --line:#26354f; --h:#dcc48f; --blush:#1d2b45}
+}
+:root[data-theme="dark"]{--bg:#0e1626; --card:#16223a; --text:#eef1f6; --muted:#9aa7ba; --line:#26354f; --h:#dcc48f; --blush:#1d2b45}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 72px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;font-family:"Be Vietnam Pro",system-ui,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);line-height:1.7;min-height:100vh;display:flex;flex-direction:column}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--teal);z-index:60}
+h1,h2,h3{font-family:"Playfair Display",Georgia,serif;color:var(--h);line-height:1.25;margin:0 0 .4em}
+a{color:inherit}
+.wrap{width:min(1080px,100% - 40px);margin-inline:auto}
+
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--teal);color:#fff;box-shadow:0 2px 16px rgba(8,40,50,.3)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:66px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:"Playfair Display",serif;font-weight:700;font-size:1.15rem}
+.logo{width:36px;height:36px;border-radius:50%;background:var(--gold);color:var(--teal);display:grid;place-items:center;font-weight:700}
+nav{display:flex;gap:6px}
+nav a{text-decoration:none;padding:8px 16px;border-radius:999px;color:#cdd6e6;font-weight:500;transition:.2s}
+nav a:hover{background:rgba(255,255,255,.12);color:#fff}
+nav a.on{background:var(--blush);color:var(--teal);font-weight:600}
+.burger{display:none;background:none;border:1px solid rgba(255,255,255,.4);color:#fff;border-radius:8px;padding:6px 12px;font:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+
+main{flex:1}
+.page{display:none}.page.show{display:block;animation:in .45s ease}
+@keyframes in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+section{padding:56px 0}
+.title{font-size:2rem;font-weight:700;margin-bottom:4px}
+.title::after{content:"";display:block;width:56px;height:4px;border-radius:4px;background:var(--rose);margin-top:8px}
+.sub{color:var(--muted);margin:12px 0 28px;max-width:62ch}
+
+.hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal2) 100%);color:#fff;padding:60px 0 90px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 20%,rgba(217,164,65,.28),transparent 45%),repeating-linear-gradient(90deg,rgba(255,255,255,.04) 0 1px,transparent 1px 48px)}
+.hg{display:grid;grid-template-columns:1.15fr 1fr;gap:36px;align-items:center;position:relative}
+.hello{color:#e8d3a3;font-weight:600;margin:0}
+.hero h1{color:#fff;font-size:clamp(2.1rem,5vw,3.3rem);font-weight:800;margin:4px 0 10px}
+.role{font-size:1.15rem;color:#cdd6e6;min-height:1.9em;margin:0 0 14px}
+/* .role b{color:#fff;border-right:2px solid var(--rose);padding-right:3px} */
+.lead{color:#e1e7f1;max-width:56ch;margin:0 0 26px}
+.en{display:block;margin-top:10px;font-style:italic;opacity:.85;font-size:.94em}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{padding:12px 26px;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid transparent;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.rose{background:var(--gold);color:var(--teal)}
+.btn.line{border-color:rgba(255,255,255,.6);color:#fff}
+.art{width:100%;max-width:440px;justify-self:center;filter:drop-shadow(0 18px 24px rgba(0,0,0,.25))}
+.cut{display:block;width:auto;height:440px;max-width:100%;object-fit:contain;object-position:center;justify-self:center;border-radius:24px;filter:drop-shadow(0 16px 28px rgba(0,0,0,.35))}
+
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:-48px;position:relative}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px 20px;box-shadow:0 10px 26px rgba(15,76,92,.12);border-top:4px solid var(--rose)}
+.stat strong{display:block;color:var(--h);font-family:"Playfair Display",serif;font-size:1.1rem}
+.stat span{color:var(--muted);font-size:.9rem}
+
+.flow{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:0 0 34px}
+.flow span{background:var(--blush);color:var(--h);border-radius:999px;padding:8px 18px;font-weight:600;font-size:.92rem}
+.flow i{color:var(--rose);font-style:normal;font-weight:700}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px;box-shadow:0 6px 20px rgba(15,76,92,.07);transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(15,76,92,.15)}
+.card h3{font-size:1.1rem;margin-bottom:4px}
+.card p{margin:.4em 0 0;color:var(--muted);font-size:.95rem}
+.ic{width:52px;height:52px;border-radius:16px;background:var(--blush);display:grid;place-items:center;font-size:1.6rem;margin-bottom:12px}
+.tag{display:inline-block;background:var(--blush);color:var(--h);border-radius:999px;padding:3px 13px;font-size:.8rem;font-weight:600;margin:10px 6px 0 0}
+.meta{font-size:.85rem;color:var(--rose);font-weight:700;margin:0 0 4px!important}
+.slot{border:2px dashed var(--rose);background:transparent;box-shadow:none;display:grid;place-items:center;text-align:center;min-height:140px;color:var(--muted)}
+.slot:hover{transform:none;box-shadow:none;background:var(--blush)}
+.slot b{display:block;color:var(--rose);font-size:1.8rem;line-height:1}
+
+.two{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.intro{display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:center;margin-bottom:28px}
+.pic{width:120px;height:120px;border-radius:50%;background:linear-gradient(135deg,var(--rose),var(--gold));display:grid;place-items:center;color:#fff;font:700 2.6rem "Playfair Display",serif;overflow:hidden;border:5px solid var(--blush)}
+.pic img{width:100%;height:100%;object-fit:cover;object-position:50% 8%}
+.timeline{border-left:3px solid var(--line);padding-left:22px;display:grid;gap:18px}
+.timeline .card{position:relative}
+.timeline .card::before{content:"";position:absolute;left:-33px;top:28px;width:15px;height:15px;border-radius:50%;background:var(--rose);border:3px solid var(--bg)}
+.sk{margin:0 0 14px}
+.sk div{display:flex;justify-content:space-between;font-weight:600;font-size:.92rem;margin-bottom:4px}
+.sk i{display:block;height:9px;border-radius:9px;background:var(--line);overflow:hidden}
+.sk i::after{content:"";display:block;height:100%;width:var(--w,0);border-radius:9px;background:linear-gradient(90deg,var(--teal2),var(--rose));transition:width 1s ease}
+.sk.go i::after{width:var(--lv)}
+
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.filters button{font:inherit;cursor:pointer;border:1px solid var(--line);background:var(--card);color:var(--text);padding:7px 18px;border-radius:999px}
+.filters button.on{background:var(--teal);border-color:var(--teal);color:#fff}
+.cover{height:110px;border-radius:14px;margin-bottom:14px;display:grid;place-items:center;font-size:2.6rem;background:linear-gradient(135deg,var(--teal),var(--teal2))}
+.cover.r{background:linear-gradient(135deg,var(--rose),var(--gold))}
+.feat{display:grid;grid-template-columns:1fr 1.2fr;padding:0;overflow:hidden;margin-bottom:34px}
+.feat .body{padding:28px}
+.proof{min-height:260px;display:grid;place-items:center;text-align:center;padding:20px;background:var(--blush);border-right:2px dashed var(--rose);color:var(--muted);font-size:.92rem}
+.proof.has{padding:0;border:0}
+.proof img{width:100%;height:100%;object-fit:cover}
+.badge{display:inline-block;background:var(--gold);color:var(--teal);font-weight:700;font-size:.8rem;border-radius:999px;padding:4px 12px;margin-bottom:10px}
+.feat ul{margin:8px 0 0;padding-left:20px;color:var(--muted);font-size:.95rem}
+
+footer{background:var(--teal);color:#cdd6e6;padding:40px 0 22px;margin-top:40px}
+.fg{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:28px}
+footer h4{color:#fff;margin:0 0 10px;font-family:"Playfair Display",serif}
+footer a{display:block;text-decoration:none;padding:2px 0}
+footer a:hover{color:#e8d3a3}
+.copy{border-top:1px solid rgba(255,255,255,.18);margin-top:26px;padding-top:16px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.88rem}
+.copy button{background:none;border:0;color:#e8d3a3;font:inherit;cursor:pointer}
+
+@media (max-width:760px){
+  .burger{display:block}
+  nav{display:none;position:absolute;left:0;right:0;top:66px;background:var(--teal);flex-direction:column;padding:10px 20px 16px;box-shadow:0 12px 20px rgba(0,0,0,.3)}
+  nav.open{display:flex}
+  .hg,.two,.fg,.feat{grid-template-columns:1fr}
+  .proof{border-right:0;border-bottom:2px dashed var(--rose)}
+  .proof.has{border:0;max-height:300px}
+  .art{max-width:300px;order:-1}
+  .cut{height:360px}
+  .intro{grid-template-columns:1fr;justify-items:center;text-align:center}
+  section{padding:40px 0}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#home"><span data-k="name">Họ và Tên</span></a>
+    <button class="burger" id="burger" aria-label="Mở menu" aria-expanded="false">Menu</button>
+    <nav id="nav" aria-label="Điều hướng chính">
+      <a href="#home" data-p="home">Trang chủ</a>
+      <a href="#about" data-p="about">Giới thiệu</a>
+      <a href="#portfolio" data-p="portfolio">Portfolio</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- ============ TRANG CHỦ ============ -->
+<div class="page" id="home">
+  <div class="hero">
+    <div class="wrap hg">
+      <div>
+        <p class="hello">Xin chào, mình là</p>
+        <h1 data-k="name">Họ và Tên</h1>
+        <p class="role">Sinh viên năm 2 · <b>25LG114</b></p>
+        <p class="lead"><span data-k="intro"></span><span class="en" lang="en" data-k="introEn"></span></p>
+        <div class="btns">
+          <a class="btn rose" href="#portfolio">Xem portfolio</a>
+          <a class="btn line" href="#about">Về mình</a>
+        </div>
+      </div>
+      <svg class="art" viewBox="0 0 440 340" role="img" aria-label="Minh họa xe tải chở hàng, thùng hàng và biểu đồ kế toán">
+        <circle cx="220" cy="170" r="150" fill="#eef1f6" opacity=".95"/>
+        <rect x="40" y="276" width="360" height="8" rx="4" fill="#14213d" opacity=".35"/>
+        <!-- xe tải -->
+        <rect x="52" y="168" width="172" height="102" rx="10" fill="#2a4573"/>
+        <rect x="64" y="182" width="148" height="12" rx="6" fill="#fff" opacity=".25"/>
+        <path d="M224 196h48l30 32v42h-78z" fill="#14213d"/>
+        <path d="M236 204h30l20 24h-50z" fill="#dbe4f2"/>
+        <circle cx="104" cy="272" r="20" fill="#2a2f36"/><circle cx="104" cy="272" r="8" fill="#b8925a"/>
+        <circle cx="262" cy="272" r="20" fill="#2a2f36"/><circle cx="262" cy="272" r="8" fill="#b8925a"/>
+        <!-- thùng hàng -->
+        <rect x="322" y="226" width="64" height="50" rx="4" fill="#d9a441"/><path d="M322 246h64M354 226v20" stroke="#fff" stroke-width="4" opacity=".6"/>
+        <rect x="334" y="180" width="48" height="46" rx="4" fill="#b8925a"/><path d="M334 198h48M358 180v18" stroke="#fff" stroke-width="4" opacity=".6"/>
+        <!-- thẻ biểu đồ -->
+        <rect x="78" y="48" width="150" height="96" rx="14" fill="#fff"/>
+        <rect x="94" y="100" width="18" height="28" rx="3" fill="#2a4573"/><rect x="122" y="86" width="18" height="42" rx="3" fill="#b8925a"/><rect x="150" y="72" width="18" height="56" rx="3" fill="#d9a441"/><rect x="178" y="62" width="18" height="66" rx="3" fill="#14213d"/>
+        <path d="M94 96l28-14 28-14 28-12" fill="none" stroke="#14213d" stroke-width="3" stroke-linecap="round" opacity=".5"/>
+        <!-- đồng xu -->
+        <circle cx="316" cy="92" r="34" fill="#d9a441"/><circle cx="316" cy="92" r="26" fill="none" stroke="#fff" stroke-width="3" opacity=".7"/>
+        <text x="316" y="102" text-anchor="middle" font-size="30" font-weight="700" fill="#fff" font-family="Georgia,serif">₫</text>
+      </svg>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat"><strong data-k="class">Lớp</strong><span>Lớp của mình</span></div>
+      <div class="stat"><strong data-k="school">Trường</strong><span>Sinh viên năm 2</span></div>
+      <div class="stat"><strong data-k="major">Ngành</strong><span>Định hướng nghề nghiệp</span></div>
+    </div>
+  </div>
+  <section>
+    <div class="wrap">
+      <h2 class="title">Điểm nhấn</h2>
+      <p class="sub">Kế toán giữ cho con số chính xác, logistics giữ cho hàng hóa đi đúng hướng. Mình học cả hai để hiểu trọn một chuỗi giá trị.</p>
+      <div class="flow"><span>Chứng từ</span><i>→</i><span>Kho bãi</span><i>→</i><span>Vận chuyển</span><i>→</i><span>Thanh toán</span><i>→</i><span>Báo cáo</span></div>
+      <div class="grid">
+        <div class="card"><div class="ic">📒</div><h3>Kế toán</h3><p>Nắm nguyên lý kế toán, lập chứng từ, sổ sách và báo cáo cơ bản.</p></div>
+        <div class="card"><div class="ic">🚚</div><h3>Logistics</h3><p>Hiểu quy trình kho vận, vận chuyển và chuỗi cung ứng từ nhà cung cấp đến khách hàng.</p></div>
+        <div class="card"><div class="ic">📊</div><h3>Excel &amp; số liệu</h3><p>Tổng hợp, phân tích và trình bày dữ liệu gọn gàng, dễ đọc.</p></div>
+        <div class="card"><div class="ic">🏅</div><h3>Top 3 IC Project</h3><p>Tham gia IC Project của Đại học Lạc Hồng, phụ trách lên kế hoạch và thuyết trình cho nhóm.</p></div>
+        <div class="card"><div class="ic">🌏</div><h3>Tiếng Trung</h3><p>Đang học thêm tiếng Trung để giao tiếp với người nước ngoài, bổ trợ cho ngành về sau.</p></div>
+        <div class="card"><div class="ic">🌿</div><h3>Đọc sách &amp; du lịch</h3><p>Hai thói quen giúp mình tỉ mỉ hơn và linh hoạt hơn mỗi ngày.</p></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ GIỚI THIỆU ============ -->
+<div class="page" id="about">
+  <section>
+    <div class="wrap">
+      <h2 class="title">Giới thiệu</h2>
+      <div class="card intro" style="margin-top:22px">
+        <div class="pic" id="pic" data-k="initial">A</div>
+        <div><h3 data-k="name">Họ và Tên</h3><p style="margin:0;color:var(--muted)"><span data-k="intro"></span><span class="en" lang="en" data-k="introEn"></span></p></div>
+      </div>
+      <div class="card" style="margin-bottom:28px"><h3>Mục tiêu nghề nghiệp</h3><p data-k="goal"></p></div>
+      <div class="two">
+        <div>
+          <h3>Học vấn</h3>
+          <div class="card"><p class="meta">Đang theo học</p><h3 data-k="school">Trường</h3><p><span data-k="major">Ngành</span> · Sinh viên năm 2 · Lớp <span data-k="class">…</span></p></div>
+          <h3 style="margin-top:28px">Kỹ năng</h3>
+          <div id="skills"></div>
+        </div>
+        <div>
+          <h3>Kinh nghiệm</h3>
+          <div class="timeline" id="exp"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section style="padding-top:0">
+    <div class="wrap">
+      <h2 class="title">Sở thích</h2>
+      <p class="sub">Những điều giúp mình giữ năng lượng và nhìn mọi thứ theo nhiều hướng.</p>
+      <div class="grid" id="hobbies"></div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ PORTFOLIO ============ -->
+<div class="page" id="portfolio">
+  <section>
+    <div class="wrap">
+      <h2 class="title">Portfolio</h2>
+      <div class="card feat">
+        <div class="proof" id="proof"><div><b style="display:block;font-size:2.2rem">🖼️</b>Ô ảnh minh chứng<br>Đặt link ảnh vào CONFIG.proof để hiện ảnh ở đây</div></div>
+        <div class="body">
+          <span class="badge">Thành tích nổi bật</span>
+          <h3>IC Project – Đại học Lạc Hồng</h3>
+          <p class="meta">Top 3 cuộc thi</p>
+          <p>Là một thành viên cốt lõi và giữ vai trò định hướng chiến lược trong đội thi tham gia cuộc thi IC Project do Trường Đại học Lạc Hồng tổ chức, tôi chịu trách nhiệm chính trong việc xây dựng lộ trình thực hiện toàn diện cho cả dự án và trực tiếp đảm nhận phần thuyết trình trước hội đồng ban giám khảo. Với tinh thần trách nhiệm cao cùng tư duy tổ chức logic, tôi đã thiết kế kế hoạch chi tiết, phân chia nhiệm vụ tối ưu cho từng thành viên, giúp đội ngũ vận hành nhịp nhàng và hoàn thành đúng tiến độ đề ra.</p>
+          <p><b>Vai trò của mình:</b> người lên kế hoạch và thuyết trình cho nhóm.</p>
+          <ul><li>Lên kế hoạch thực hiện cho cả nhóm.</li><li>Thuyết trình dự án cho nhóm.</li></ul>
+          <span class="tag">Lập kế hoạch</span><span class="tag">Thuyết trình</span><span class="tag">Làm việc nhóm</span>
+        </div>
+      </div>
+      <div class="filters" id="filters"></div>
+      <div class="grid" id="projects"></div>
+    </div>
+  </section>
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fg">
+      <div><h4 data-k="name">Họ và Tên</h4><p>Sinh viên <span data-k="major">Ngành</span><br><span data-k="school">Trường</span></p></div>
+      <div><h4>Điều hướng</h4><a href="#home">Trang chủ</a><a href="#about">Giới thiệu</a><a href="#portfolio">Portfolio</a></div>
+      <div><h4>Liên hệ</h4><a id="mail" href="#">email</a><a id="tel" href="#">Điện thoại</a><a id="ln" href="#" target="_blank" rel="noopener">LinkedIn / Facebook</a></div>
+    </div>
+    <div class="copy"><span>© <span id="yr">2026</span> <span data-k="name">Họ và Tên</span>. Bảo lưu mọi quyền.</span><button id="top">Lên đầu trang</button></div>
+  </div>
+</footer>
+
+<script>
+/* ============================================================
+   CHỈNH SỬA TẠI ĐÂY – chỉ cần đổi nội dung trong khối này
+   ============================================================ */
+const CONFIG = {
+  name: "Phan Thị Bảo Châu",                 // ← Họ và tên
+  class: "25LG114",                              // ← Lớp
+  school: "Đại học Lạc Hồng",                   // ← Trường
+  major: "Kế toán · Logistics",                 // ← Ngành
+  email: "phanthibaochau@gmail.com",                   // ← Email (để trống để ẩn)
+  phone: "0333491201",                                    // ← Số điện thoại (để trống để ẩn)
+  link: "",                                     // ← Link LinkedIn / Facebook (để trống để ẩn)
+  photo: "./images/avatar2.jpg",                 // ← Ảnh PNG đã tách nền, ví dụ "./images/avatar.png" (để trống dùng hình minh họa)
+  typed: ["Kế toán", "Logistics", "Chuỗi cung ứng"],
+  proof: "./images/ic_img.jpg",                                    // ← Link ảnh minh chứng IC Project, ví dụ "./images/ic-project.jpg"
+  intro: "Tôi đến từ Bà Rịa – Vũng Tàu, hiện là sinh viên năm 2 ngành Logistics tại Trường Đại học Lạc Hồng. Tôi là người có tinh thần trách nhiệm, chủ động và ham học hỏi. Trong quá trình học tập, tôi đang trau dồi kiến thức về quản lý chuỗi cung ứng, vận tải, kho bãi và xuất nhập khẩu. Tôi mong muốn tìm kiếm cơ hội làm việc thực tế để vận dụng kiến thức đã học, tích lũy kinh nghiệm và phát triển kỹ năng chuyên môn. Với thái độ nghiêm túc, tinh thần cầu tiến và sự nhiệt huyết, tôi hy vọng có thể đóng góp tích cực cho doanh nghiệp và phát triển lâu dài trong lĩnh vực Logistics.",
+  introEn: "I am from Ba Ria – Vung Tau and currently a second-year Logistics student at Lac Hong University. I am a responsible, proactive, and enthusiastic individual who is always willing to learn and improve. Through my studies, I have gained basic knowledge of supply chain management, transportation, warehousing, and import-export procedures. I am also developing my communication, teamwork, problem-solving, and time management skills. I am looking for an opportunity to gain practical experience, apply my academic knowledge, and develop my professional skills in a real working environment. With a positive attitude, a strong sense of responsibility, and a willingness to learn, I hope to contribute to the company while building a solid foundation for my future career in the Logistics industry.",
+  goal: "Mình muốn thực tập tại vị trí kế toán kho, kế toán thanh toán hoặc điều phối logistics để vận dụng kiến thức đã học, đồng thời nâng cao kỹ năng Excel, phần mềm kế toán và tiếng Trung để làm việc với đối tác nước ngoài."
+};
+
+// Thêm kinh nghiệm: copy một dòng { ... } rồi sửa
+const EXPERIENCE = [
+  { time: "2026", title: "Quán Trà - Ngô Gia", desc: "Phụ Trách công việc pha chế Phát triển khả năng thấu hiểu tâm lý khách hàng, khéo léo xử lý các tình huống phát sinh tại quầy với thái độ chuyên nghiệp, nhã nhặn.." },
+  { time: "2026", title: "Top 3 IC Project – Đại học Lạc Hồng", desc: "Phụ trách lên kế hoạch và thuyết trình cho nhóm." }
+];
+
+// Thêm sở thích: copy một dòng { ... } rồi sửa
+const HOBBIES = [
+  { icon: "📚", title: "Đọc sách", desc: "Đọc để thư giãn, mở rộng hiểu biết và rèn sự tập trung." },
+  { icon: "✈️", title: "Du lịch", desc: "Mỗi chuyến đi là dịp khám phá nơi mới, con người mới và học cách thích nghi." }
+];
+
+// Thêm kỹ năng: level là phần trăm tự đánh giá (0–100), hãy chỉnh theo đúng năng lực
+const SKILLS = [
+  { name: "Microsoft Excel", level: 75 },
+  { name: "Nguyên lý kế toán", level: 70 },
+  { name: "Quy trình logistics & kho vận", level: 65 },
+  { name: "Phần mềm kế toán (MISA...)", level: 50 },
+  { name: "Tiếng Anh chuyên ngành", level: 55 },
+  { name: "Tiếng Trung giao tiếp (đang học)", level: 40 }
+];
+
+// Thêm dự án: type dùng để lọc ("Kế toán", "Logistics", "Hoạt động"...)
+const PROJECTS = [
+  { type: "Kế toán", icon: "📒", title: "Báo cáo tài chính mẫu", desc: "Lập bảng cân đối kế toán và báo cáo kết quả kinh doanh cho một doanh nghiệp giả định.", tags: ["Excel", "Kế toán"], link: "" },
+  { type: "Logistics", icon: "🚚", title: "Mô phỏng chuỗi cung ứng", desc: "Phân tích quy trình đặt hàng, lưu kho và giao hàng của một mặt hàng cụ thể.", tags: ["Chuỗi cung ứng", "Phân tích"], link: "" },
+  { type: "Hoạt động", icon: "🤝", title: "Hoạt động nhóm / CLB", desc: "Mô tả vai trò của bạn và đóng góp cho nhóm.", tags: ["Làm việc nhóm"], link: "" }
+];
+/* ============================================================ */
+
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+
+// Thông tin cá nhân
+$$("[data-k]").forEach(el => {
+  const k = el.dataset.k;
+  el.textContent = k === "initial" ? (CONFIG.name.trim().split(/\s+/).pop()[0] || "A").toUpperCase() : CONFIG[k];
+});
+document.title = "CV – " + CONFIG.name + " | " + CONFIG.major;
+const setLink = (id, val, href) => { const a = $("#" + id); val ? (a.textContent = a.id === "ln" ? "LinkedIn / Facebook" : val, a.href = href) : a.style.display = "none"; };
+setLink("mail", CONFIG.email, "mailto:" + CONFIG.email);
+setLink("tel", CONFIG.phone, "tel:" + CONFIG.phone);
+setLink("ln", CONFIG.link, CONFIG.link);
+$("#yr").textContent = new Date().getFullYear();
+if (CONFIG.photo) {
+  // Đặt ảnh vào chỗ hình minh họa NGAY (giữ sẵn chiều cao) nên khi ảnh tải xong trang không bị nhảy
+  const art = $(".art"), c = new Image();
+  c.alt = "Ảnh của " + CONFIG.name; c.className = "cut";
+  art.replaceWith(c); $(".hero").classList.add("ph");
+  c.onerror = () => { c.replaceWith(art); $(".hero").classList.remove("ph"); };
+  c.src = CONFIG.photo;
+  const i = new Image(); i.alt = c.alt;
+  i.onload = () => $("#pic").replaceChildren(i);
+  i.src = CONFIG.photo;
+}
+
+if (CONFIG.proof) {
+  const p = new Image(); p.alt = "Ảnh minh chứng IC Project";
+  p.onload = () => { $("#proof").replaceChildren(p); $("#proof").classList.add("has"); };
+  p.src = CONFIG.proof;
+}
+
+// Render danh sách
+$("#exp").innerHTML = EXPERIENCE.map(e => `<div class="card"><p class="meta">${e.time}</p><h3>${e.title}</h3><p>${e.desc}</p></div>`).join("");
+$("#hobbies").innerHTML = HOBBIES.map(h => `<div class="card"><div class="ic">${h.icon}</div><h3>${h.title}</h3><p>${h.desc}</p></div>`).join("");
+$("#skills").innerHTML = SKILLS.map(s => `<div class="sk" style="--lv:${s.level}%"><div><span>${s.name}</span><span>${s.level}%</span></div><i></i></div>`).join("");
+
+const types = ["Tất cả", ...new Set(PROJECTS.map(p => p.type))];
+function drawProjects(t) {
+  $("#projects").innerHTML = PROJECTS.filter(p => t === "Tất cả" || p.type === t).map((p, i) =>
+    `<div class="card"><div class="cover ${i % 2 ? "r" : ""}">${p.icon}</div><p class="meta">${p.type}</p><h3>${p.title}</h3><p>${p.desc}</p>${p.tags.map(x => `<span class="tag">${x}</span>`).join("")}${p.link ? `<p><a href="${p.link}" target="_blank" rel="noopener">Xem chi tiết</a></p>` : ""}</div>`
+  ).join("");
+  $$("#filters button").forEach(b => b.classList.toggle("on", b.textContent === t));
+}
+$("#filters").innerHTML = types.map(t => `<button type="button">${t}</button>`).join("");
+$("#filters").addEventListener("click", e => { if (e.target.tagName === "BUTTON") drawProjects(e.target.textContent); });
+drawProjects("Tất cả");
+
+// Điều hướng giữa các trang bằng #hash
+const pages = ["home", "about", "portfolio"];
+function route() {
+  const id = pages.includes(location.hash.slice(1)) ? location.hash.slice(1) : "home";
+  $$(".page").forEach(p => p.classList.toggle("show", p.id === id));
+  $$("nav a").forEach(a => a.classList.toggle("on", a.dataset.p === id));
+  $("#nav").classList.remove("open"); $("#burger").setAttribute("aria-expanded", "false");
+  window.scrollTo(0, 0);
+  $$(".sk").forEach(s => { s.classList.remove("go"); if (id === "about") requestAnimationFrame(() => setTimeout(() => s.classList.add("go"), 60)); });
+}
+addEventListener("hashchange", route); route();
+
+$("#burger").addEventListener("click", () => { const o = $("#nav").classList.toggle("open"); $("#burger").setAttribute("aria-expanded", o); });
+$("#top").addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+
+// Hiệu ứng gõ chữ
+(function () {
+  const el = $("#typed"), words = CONFIG.typed; let w = 0, c = 0, del = false;
+  if (matchMedia("(prefers-reduced-motion:reduce)").matches) { el.textContent = words[0]; return; }
+  (function tick() {
+    const full = words[w]; c += del ? -1 : 1; el.textContent = full.slice(0, c);
+    let d = del ? 40 : 95;
+    if (!del && c === full.length) { del = true; d = 1400; } else if (del && c === 0) { del = false; w = (w + 1) % words.length; d = 300; }
+    setTimeout(tick, d);
+  })();
+})();
+</script>
+</body>
+</html>
